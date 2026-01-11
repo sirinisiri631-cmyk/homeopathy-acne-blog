@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natural Homeopathic Remedies for Acne & Skin Health | Dr. Beerkula Sirini</title>
+    <title>Dr. Beerkula Sirini - Homeopathy Specialist | Natural Acne & Skin Care</title>
     <style>
         * {
             margin: 0;
@@ -15,65 +15,98 @@
             font-family: 'Georgia', serif;
             line-height: 1.8;
             color: #333;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #e8f5e9 0%, #fff3e0 100%);
         }
         
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+        /* Doctor Profile Section */
+        .doctor-profile {
+            background: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
             padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
         }
         
-        header h1 {
+        .doctor-profile::before {
+            content: "🌿";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            top: -50px;
+            right: 50px;
+        }
+        
+        .doctor-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        .doctor-profile h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
-        .author-info {
-            margin-top: 20px;
-            font-size: 1.1em;
+        .doctor-credentials {
+            font-size: 1.2em;
             font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .doctor-tagline {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             background: white;
             padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
-        .featured-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800') center/cover;
+        .intro-section {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 30px;
             border-radius: 10px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
+            border-left: 5px solid #4caf50;
         }
         
         h2 {
-            color: #667eea;
+            color: #2e7d32;
             margin-top: 40px;
             margin-bottom: 20px;
             font-size: 2em;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #4caf50;
             padding-bottom: 10px;
         }
         
         h3 {
-            color: #764ba2;
+            color: #388e3c;
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 1.5em;
@@ -85,16 +118,23 @@
         }
         
         .remedy-card {
-            background: #f9f9f9;
-            border-left: 5px solid #667eea;
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            border-left: 5px solid #fbc02d;
             padding: 25px;
             margin: 25px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .remedy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .remedy-card h3 {
             margin-top: 0;
+            color: #f57f17;
         }
         
         ul {
@@ -106,167 +146,141 @@
             margin-bottom: 10px;
         }
         
-        .intro-section {
-            background: #e8f4f8;
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-        }
-        
         footer {
-            background: #333;
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
             color: white;
             text-align: center;
-            padding: 30px;
+            padding: 40px;
             margin-top: 60px;
         }
         
         .disclaimer {
             background: #fff3cd;
-            border: 1px solid #ffc107;
+            border: 2px solid #ffc107;
             padding: 20px;
-            border-radius: 5px;
+            border-radius: 8px;
             margin-top: 40px;
         }
+        
+        .homeopathy-pills {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .pill {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .pill:nth-child(1) { background: #ff6b6b; }
+        .pill:nth-child(2) { background: #4ecdc4; }
+        .pill:nth-child(3) { background: #ffe66d; }
+        .pill:nth-child(4) { background: #a8e6cf; }
+        .pill:nth-child(5) { background: #ff8b94; }
     </style>
 </head>
 <body>
+    <!-- Doctor Profile Section -->
+    <div class="doctor-profile">
+        <img src="IMG_8455.jpeg" alt="Dr. Beerkula Sirini" class="doctor-photo">
+        <h1>Dr. Beerkula Sirini</h1>
+        <p class="doctor-credentials">Homeopathy Specialist | Natural Healing Expert</p>
+        <p class="doctor-tagline">Dedicated to Your Holistic Health & Natural Skin Care</p>
+    </div>
+    
     <header>
-        <h1>Natural Homeopathic Remedies for Acne & Clear Skin</h1>
-        <div class="author-info">
-            <p>By Dr. Beerkula Sirini, Homeopathy Specialist</p>
-            <p>Your Guide to Natural, Holistic Skin Health</p>
-        </div>
+        <h2>Natural Homeopathic Remedies for Acne & Clear Skin</h2>
+        <p>Your Path to Radiant, Healthy Skin Through Natural Medicine</p>
     </header>
-
+    
     <div class="container">
-        <div class="featured-image">
-            Natural Healing for Radiant Skin
+        <div class="homeopathy-pills">
+            <span class="pill"></span>
+            <span class="pill"></span>
+            <span class="pill"></span>
+            <span class="pill"></span>
+            <span class="pill"></span>
         </div>
-
+        
         <div class="intro-section">
-            <p><strong>Welcome to a natural approach to skin health!</strong> As a homeopathy specialist, I've witnessed countless transformations in patients struggling with acne, blemishes, and various skin issues. Homeopathy offers a gentle yet powerful alternative to harsh chemical treatments, working with your body's natural healing mechanisms to restore clear, healthy skin from within.</p>
+            <p><strong>Welcome to natural, holistic skin health!</strong> As a dedicated homeopathy specialist, I've witnessed countless transformations in patients struggling with acne, blemishes, and various skin issues. Homeopathy offers a gentle yet powerful alternative to harsh chemical treatments, working with your body's natural healing mechanisms to restore clear, healthy skin from within.</p>
         </div>
-
+        
         <h2>Understanding Acne Through Homeopathy</h2>
-        <p>Acne is more than just a cosmetic concern—it's often a reflection of internal imbalances. In homeopathy, we don't simply treat the visible symptoms; we address the root causes, whether they're hormonal irregularities, digestive issues, or emotional stress. This holistic approach ensures long-lasting results and overall wellness.</p>
-
-        <p>Many conventional treatments focus solely on drying out pimples or killing bacteria on the skin's surface. While these methods may provide temporary relief, they often come with side effects like dryness, irritation, and photosensitivity. Homeopathic remedies, on the other hand, work gently and safely to restore balance without harmful side effects.</p>
-
+        <p>Acne is more than just a cosmetic concern—it's often a reflection of internal imbalances. In homeopathy, we don't simply treat visible symptoms; we address root causes, whether they're hormonal irregularities, digestive issues, or emotional stress. This holistic approach ensures long-lasting results and overall wellness.</p>
+        
         <h2>Top Homeopathic Remedies for Acne and Skin Issues</h2>
-
+        
         <div class="remedy-card">
-            <h3>1. Berberis Aquifolium (Oregon Grape)</h3>
+            <h3>🌿 Berberis Aquifolium (Oregon Grape)</h3>
             <p>One of the most trusted remedies in homeopathic dermatology, Berberis Aquifolium excels at treating acne accompanied by rough, blotchy skin and uneven pigmentation.</p>
             <ul>
-                <li><strong>Best for:</strong> Post-acne marks, uneven skin tone, and persistent blemishes</li>
-                <li><strong>Benefits:</strong> Improves skin clarity, reduces discoloration, and promotes even texture</li>
-                <li><strong>Usage:</strong> Can be taken internally or applied topically as a mother tincture</li>
+                <li><strong>Best for:</strong> Post-acne marks, uneven skin tone, persistent blemishes</li>
+                <li><strong>Benefits:</strong> Improves skin clarity, reduces discoloration, promotes even texture</li>
             </ul>
         </div>
-
+        
         <div class="remedy-card">
-            <h3>2. Hepar Sulphuris</h3>
+            <h3>🌿 Hepar Sulphuris</h3>
             <p>This powerful remedy is particularly effective for painful, pus-filled acne that's sensitive to touch and cold temperatures.</p>
             <ul>
-                <li><strong>Best for:</strong> Cystic acne, painful pustules, and recurring boils</li>
-                <li><strong>Benefits:</strong> Reduces inflammation, promotes healing, and prevents scarring</li>
-                <li><strong>Key indicator:</strong> Extreme sensitivity to cold and touch in affected areas</li>
+                <li><strong>Best for:</strong> Cystic acne, painful pustules, recurring boils</li>
+                <li><strong>Benefits:</strong> Reduces inflammation, promotes healing, prevents scarring</li>
             </ul>
         </div>
-
+        
         <div class="remedy-card">
-            <h3>3. Pulsatilla</h3>
+            <h3>🌿 Pulsatilla</h3>
             <p>Ideal for hormonal acne that fluctuates with menstrual cycles, Pulsatilla addresses both physical and emotional aspects of skin health.</p>
             <ul>
-                <li><strong>Best for:</strong> Teenage acne, hormonal breakouts, and changeable skin conditions</li>
+                <li><strong>Best for:</strong> Teenage acne, hormonal breakouts, changeable skin conditions</li>
                 <li><strong>Benefits:</strong> Balances hormones naturally, reduces PMS-related breakouts</li>
-                <li><strong>Personality match:</strong> Works best for gentle, emotional individuals who feel better in fresh air</li>
             </ul>
         </div>
-
+        
         <div class="remedy-card">
-            <h3>4. Hamamelis Virginica (Witch Hazel)</h3>
+            <h3>🌿 Hamamelis Virginica (Witch Hazel)</h3>
             <p>A natural astringent with powerful anti-inflammatory properties, Hamamelis works wonders for oily, inflamed skin.</p>
             <ul>
-                <li><strong>Best for:</strong> Oily skin, enlarged pores, and inflammatory acne</li>
+                <li><strong>Best for:</strong> Oily skin, enlarged pores, inflammatory acne</li>
                 <li><strong>Benefits:</strong> Controls excess oil production, tightens pores, soothes irritation</li>
-                <li><strong>Application:</strong> Highly effective as both internal remedy and topical treatment</li>
             </ul>
         </div>
-
-        <div class="remedy-card">
-            <h3>5. Echinacea Angustifolia</h3>
-            <p>Known for its immune-boosting and detoxifying properties, Echinacea addresses acne caused by toxin buildup and weakened immunity.</p>
-            <ul>
-                <li><strong>Best for:</strong> Acne from poor diet, frequent infections, or sluggish detoxification</li>
-                <li><strong>Benefits:</strong> Purifies blood, strengthens immunity, promotes skin healing</li>
-                <li><strong>Holistic impact:</strong> Improves overall health while clearing skin</li>
-            </ul>
-        </div>
-
-        <div class="remedy-card">
-            <h3>6. Curcuma Longa (Turmeric)</h3>
-            <p>The golden remedy of Ayurveda meets homeopathy! Curcuma Longa is exceptional for inflammatory conditions and blackheads.</p>
-            <ul>
-                <li><strong>Best for:</strong> Pustular acne, blackheads, and inflammatory skin conditions</li>
-                <li><strong>Benefits:</strong> Anti-inflammatory, antibacterial, and skin-brightening properties</li>
-                <li><strong>Additional uses:</strong> Excellent for digestive issues that manifest as skin problems</li>
-            </ul>
-        </div>
-
+        
         <h2>Lifestyle Recommendations for Clear Skin</h2>
         <p>While homeopathic remedies are powerful, they work best when combined with healthy lifestyle habits:</p>
         
         <h3>Dietary Guidelines</h3>
         <ul>
-            <li>Increase water intake to at least 8-10 glasses daily for proper hydration and toxin elimination</li>
-            <li>Consume fresh fruits and vegetables rich in antioxidants and vitamins</li>
-            <li>Reduce refined sugars and processed foods that can trigger inflammation</li>
+            <li>Increase water intake to at least 8-10 glasses daily</li>
+            <li>Consume fresh fruits and vegetables rich in antioxidants</li>
+            <li>Reduce refined sugars and processed foods</li>
             <li>Include zinc-rich foods like pumpkin seeds, nuts, and legumes</li>
-            <li>Add probiotic-rich foods for gut health (yogurt, kefir, fermented vegetables)</li>
         </ul>
-
+        
         <h3>Skincare Routine</h3>
         <ul>
             <li>Cleanse gently twice daily with mild, natural cleansers</li>
             <li>Avoid harsh scrubbing which can worsen inflammation</li>
-            <li>Use non-comedogenic moisturizers to maintain skin barrier</li>
+            <li>Use non-comedogenic moisturizers</li>
             <li>Apply sunscreen daily to prevent post-acne pigmentation</li>
-            <li>Change pillowcases regularly to reduce bacterial exposure</li>
         </ul>
-
-        <h3>Stress Management</h3>
-        <ul>
-            <li>Practice meditation or deep breathing exercises daily</li>
-            <li>Ensure adequate sleep (7-8 hours) for skin regeneration</li>
-            <li>Engage in regular physical activity to improve circulation</li>
-            <li>Spend time in nature for emotional balance</li>
-        </ul>
-
-        <h2>The Holistic Advantage</h2>
-        <p>What sets homeopathy apart is its individualized approach. During consultations, I consider not just your skin symptoms, but your overall constitution, emotional state, lifestyle, and medical history. This comprehensive evaluation allows me to prescribe remedies that address your unique needs, ensuring optimal and lasting results.</p>
-
-        <p>Homeopathic treatment is particularly beneficial for:</p>
-        <ul>
-            <li>Chronic or recurring acne that hasn't responded to conventional treatments</li>
-            <li>Hormonal acne related to PCOS, menstrual irregularities, or menopause</li>
-            <li>Sensitive skin that reacts poorly to harsh medications</li>
-            <li>Those seeking a natural, side-effect-free approach</li>
-            <li>Individuals wanting to address root causes rather than just symptoms</li>
-        </ul>
-
+        
         <div class="disclaimer">
             <h3>Important Note</h3>
-            <p><strong>Disclaimer:</strong> This information is for educational purposes only. Homeopathic remedies should be taken under the guidance of a qualified practitioner. Self-medication can be ineffective or counterproductive. For personalized treatment plans tailored to your specific condition, please consult with a certified homeopath.</p>
+            <p><strong>Disclaimer:</strong> This information is for educational purposes only. Homeopathic remedies should be taken under the guidance of a qualified practitioner. For personalized treatment plans tailored to your specific condition, please consult with a certified homeopath.</p>
         </div>
-
+        
         <h2>Begin Your Journey to Clear Skin</h2>
         <p>Clear, radiant skin is not just about what you apply externally—it's a reflection of your internal health. Through homeopathy, we can work together to restore balance, boost your body's natural healing abilities, and achieve the healthy, glowing skin you deserve.</p>
-
-        <p>Remember, healing takes time. Be patient with yourself and trust the process. The journey to clear skin is also a journey to better overall health and wellbeing.</p>
     </div>
-
+    
     <footer>
         <h3>Dr. Beerkula Sirini</h3>
         <p>Homeopathy Specialist</p>
